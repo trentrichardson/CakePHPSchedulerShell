@@ -7,8 +7,6 @@ Author
 ------
 Trent Richardson [http://trentrichardson.com]
 
-Developed as part of the CarBounce project [http://carbounce.com]
-
 License
 -------
 Copyright 2015 Trent Richardson
@@ -42,13 +40,13 @@ Copy the Scheduler plugin into your App/Plugin folder and rename the folder to S
 In your bootstrap.php file add either:
 
 ```php
-CakePlugin::loadAll();
+Plugin::loadAll();
 ```
 
 or
 
 ```php
-CakePlugin::load('Scheduler',['autoload'=>true]);
+Plugin::load('Scheduler',['autoload'=>true]);
 ```
 
 Schedule a single system cron by the shortest interval you need for SchedulerShell.php.  For example, if you have 5 tasks and the most often run is every 5 minutes, then schedule this cron to run at least every 5 minutes. For more help see [Shells as Cron Jobs](http://book.cakephp.org/2.0/en/console-and-shells/cron-jobs.html).
@@ -66,7 +64,7 @@ Now once this shell is scheduled we are able to add our entries to bootstrap.php
 ```php
 Configure::write('SchedulerShell.jobs', array(
 	'CleanUp' => array('interval' => 'next day 5:00', 'task' => 'CleanUp'),// tomorrow at 5am
-	'Newsletters' => array('interval' => 'PT15M', 'task' => 'Newsletter') //every 15 minutes
+	'Newsletters' => array('interval' => 'PT15I', 'task' => 'Newsletter') //every 15 minutes
 ));
 ```
 
@@ -75,7 +73,7 @@ The key to each entry will be used to store the previous run.  *These must be un
 **interval** is set one of two ways.
 1) For set times of day we use PHP's [relative time formats](http://www.php.net/manual/en/datetime.formats.relative.php): "next day 5:00".
 
-2) To use an interval to achieve "every 15 minutes" we use [DateInterval](http://www.php.net/manual/en/class.dateinterval.php) string format: "PT15M".
+2) To use an interval to achieve "every 15 minutes" we use [DateInterval](http://www.php.net/manual/en/class.dateinterval.php) string format: "PT15I".
 
 **task** is simply the name of the Task.
 
@@ -88,7 +86,7 @@ There are a couple optional arguments you may pass: "action" and "pass".
 ```php
 Configure::write('SchedulerShell.jobs', array(
 	'CleanUp' => array('interval' => 'next day 5:00', 'task' => 'CleanUp', 'action' => 'execute', 'pass' => array()),
-	'Newsletters' => array('interval' => 'PT15M', 'task' => 'Newsletter', 'action' => 'execute', 'pass' => array())
+	'Newsletters' => array('interval' => 'PT15I', 'task' => 'Newsletter', 'action' => 'execute', 'pass' => array())
 ));
 ```
 

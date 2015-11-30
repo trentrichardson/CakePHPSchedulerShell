@@ -11,8 +11,7 @@
 	    }
 	},
 	"require": {
-		"php": ">=5.3.6",
-		"composer/installers": "*"
+		"php": ">=5.3.6"
 	},
 	"support": {
 		"source": "https://github.com/trentrichardson/cakephp-scheduler"
