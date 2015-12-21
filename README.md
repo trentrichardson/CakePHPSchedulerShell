@@ -54,7 +54,7 @@ Schedule a single system cron by the shortest interval you need for SchedulerShe
 Example cron job:
 
 ````
-*/5 * * * * cd /path/to/app && Console/cake Scheduler.Scheduler
+*/5 * * * * cd /path/to/app && bin/cake Scheduler.Scheduler
 ````
 
 This would run the SchedulerShell every 5 minutes.
