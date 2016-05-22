@@ -1,9 +1,13 @@
 {
-	"name": "trentrichardson/cakephp-scheduler",
+	"name": "crabstudio/scheduler",
 	"type": "cakephp-plugin",
 	"description": "Makes scheduling tasks in CakePHP much simpler.",
-	"keywords": ["cakephp","scheduler","cron job","task"],
-	"homepage": "http://github.com/trentrichardson/cakephp-scheduler",
+	"keywords": ["cakephp","scheduler","cron job","task", "crabstudio", "anhtuank7c"],
+    "suggest": {
+        "crabstudio/email-queue": "Allows you to simple send bulk email",
+        "crabstudio/bao-kim": "baokim.vn payment gateway"
+    },
+	"homepage": "http://github.com/crabstudio/cakephp-scheduler",
 	"license": "MIT",
 	"autoload": {
 	    "psr-4": {
@@ -11,12 +15,20 @@
 	    }
 	},
 	"require": {
-		"php": ">=5.3.6"
+		"php": ">=5.3.6",
+        "cakephp/cakephp": "~3.0"
 	},
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "cakephp/cakephp-codesniffer": "2.*"
+    },
 	"support": {
-		"source": "https://github.com/trentrichardson/cakephp-scheduler"
+		"source": "https://github.com/crabstudio/cakephp-scheduler",
+		"pulls": "https://github.com/crabstudio/cakephp-scheduler/pulls"
 	},
 	"extra": {
 		"installer-name": "Scheduler"
-	}
+	},
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
