@@ -207,7 +207,7 @@ class SchedulerShell extends Shell
             if ($tmptime <= $now) {
                 $this->hr();
                 $this->out("Running $name");
-            	Log::info("Running $name");
+                Log::info("Running $name");
                 $this->hr();
 
                 if (!isset($this->$task)) {
@@ -235,7 +235,7 @@ class SchedulerShell extends Shell
             } else {
                 $this->hr();
                 $this->out("Not time to run $name, skipping.");
-            	Log::info("Not time to run $name, skipping.");
+                Log::info("Not time to run $name, skipping.");
                 $this->hr();
             }
         }
