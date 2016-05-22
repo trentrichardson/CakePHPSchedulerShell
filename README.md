@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/crabstudio/cakephp-scheduler.svg?branch=master)](https://travis-ci.org/crabstudio/cakephp-scheduler)
 CakePHP Scheduler Plugin
 ========================
 
